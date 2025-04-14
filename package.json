@@ -3,6 +3,7 @@
 	"version": "1.0.1",
 	"description": "NodeJS Syslog Server",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"author": {
 		"name": "Luiz Guilherme Thess",
 		"email": "guithess@gmail.com"
