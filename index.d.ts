@@ -42,6 +42,12 @@ declare namespace SyslogServer {
  */
 declare class SyslogServer extends EventEmitter {
   /**
+   * Creates a new SyslogServer instance.
+   * @param encoding The encoding to use for the server (default: 'utf8').
+   */
+  constructor(encoding?: BufferEncoding);
+
+  /**
    * Starts the Syslog server.
    * @param options Options for the server.
    * @param cb Optional callback to execute when the server starts.

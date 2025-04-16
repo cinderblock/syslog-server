@@ -5,8 +5,9 @@ const EventEmitter = require("events");
 
 class SyslogServer extends EventEmitter {
 
-    constructor() {
+    constructor(encoding = "utf8") {
         super();
+        this.encoding = encoding;
         this.socket = null;
     }
 
@@ -36,7 +37,7 @@ class SyslogServer extends EventEmitter {
                     let message = {
 						date: new Date(),
                         host: remote.address,
-                        message: msg.toString("utf8"),
+                        message: msg.toString(this.encoding),
 						protocol: remote.family
                     };
                     this.emit("message", message);
