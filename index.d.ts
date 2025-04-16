@@ -34,7 +34,7 @@ declare namespace SyslogServer {
   /**
    * Options for starting the Syslog server.
    */
-  export type Options = BindOptions;
+  export type Options = Omit<BindOptions, "exclusive">;
 }
 
 /**
